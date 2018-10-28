@@ -11,15 +11,24 @@ public class Main extends ListenerAdapter {
         JDABuilder builder = new JDABuilder(AccountType.BOT);
         String token = "MzgzOTg3ODUwODcxNDM5MzYy.Dre9jg._WKs7uv9uOlZtYbR9Rz2W7uZdtc";
         builder.setToken(token);
-        builder.addEventListener();
+        builder.addEventListener(new Main());
         builder.buildAsync();
     }
 
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
-        super.onMessageReceived(event);
-        if(event.getMessage().getContentRaw().equalsIgnoreCase("!ping")) {
-            event.getChannel().sendMessage("Pong!").queue();
+        if (!event.getAuthor().isBot()) {
+            System.out.println("Message from " +
+                    event.getAuthor() +
+                    "in " +
+                    event.getChannel() +
+                    ": " +
+                    event.getMessage().getContentDisplay()
+            );
+
+            if (event.getMessage().getContentRaw().equalsIgnoreCase("!ping")) {
+                event.getChannel().sendMessage("Pong!").queue();
+            }
         }
     }
 }
