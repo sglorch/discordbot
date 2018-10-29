@@ -18,17 +18,15 @@ public class Main extends ListenerAdapter {
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
         if (!event.getAuthor().isBot()) {
-            System.out.println("Message from " +
-                    event.getAuthor() +
-                    "in " +
-                    event.getChannel() +
-                    ": " +
-                    event.getMessage().getContentDisplay()
-            );
+            System.out.println("Message from " + event.getAuthor() + "in " + event.getChannel() + ": " + event.getMessage().getContentDisplay());
 
             if (event.getMessage().getContentRaw().equalsIgnoreCase("!ping")) {
-                event.getChannel().sendMessage("Pong!").queue();
+                cmd_ping(event);
             }
         }
+    }
+
+    private static void cmd_ping(MessageReceivedEvent event) {
+        event.getChannel().sendMessage("Pong!").queue();
     }
 }
