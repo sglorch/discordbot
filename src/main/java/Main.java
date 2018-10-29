@@ -2,14 +2,11 @@ import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDABuilder;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
-import sun.plugin2.message.Message;
-
 import javax.security.auth.login.LoginException;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
+import java.util.Random;
 
 public class Main extends ListenerAdapter {
 
@@ -33,6 +30,10 @@ public class Main extends ListenerAdapter {
             if (event.getMessage().getContentRaw().toLowerCase().startsWith("!time")) {
                 cmd_time(event);
             }
+
+            if (event.getMessage().getContentRaw().toLowerCase().startsWith("!8ball")) {
+                cmd_8ball(event);
+            }
         }
     }
 
@@ -47,5 +48,21 @@ public class Main extends ListenerAdapter {
         LocalDateTime truncatedTime = timePoint.truncatedTo(ChronoUnit.SECONDS);
         String time = truncatedTime.format(DateTimeFormatter.ofPattern("dd.MM.yyy - HH:mm:ss"));
         event.getChannel().sendMessage("The time and date is: " + time).queue();
+    }
+
+    private static void cmd_8ball(MessageReceivedEvent event) {
+        String[] answers = {
+                "Absolutely!",
+                "Yes, sure.",
+                "Of course!",
+                "Maybe...",
+                "This can't be said.",
+                "No, simply no!",
+                "Why are you even asking?!",
+                "Are you kidding me?",
+                "There is nothing that true."
+        };
+        Integer randInt = new Random().nextInt(9);
+        event.getChannel().sendMessage(answers[randInt]).queue();
     }
 }
