@@ -1,5 +1,6 @@
 import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDABuilder;
+import net.dv8tion.jda.core.events.ReadyEvent;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 import javax.security.auth.login.LoginException;
@@ -17,6 +18,11 @@ public class Main extends ListenerAdapter {
         builder.addEventListener(new Main());
         builder.buildAsync();
     }
+
+    public void onReady(ReadyEvent event) {
+
+    }
+
 
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
@@ -51,6 +57,7 @@ public class Main extends ListenerAdapter {
     }
 
     private static void cmd_8ball(MessageReceivedEvent event) {
+        System.out.println("Executing cmd_ping...");
         String[] answers = {
                 "Absolutely!",
                 "Yes, sure.",
