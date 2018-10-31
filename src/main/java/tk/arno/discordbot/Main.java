@@ -1,24 +1,29 @@
 package tk.arno.discordbot;
 
-import net.dv8tion.jda.core.AccountType;
+import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
+import net.dv8tion.jda.core.entities.*;
 import net.dv8tion.jda.core.events.ReadyEvent;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 import javax.security.auth.login.LoginException;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoUnit;
-import java.util.Random;
 
 public class Main extends ListenerAdapter {
 
-    public static void main(String[] args) throws LoginException {
-        JDABuilder builder = new JDABuilder(AccountType.BOT);
-        String token = "MzgzOTg3ODUwODcxNDM5MzYy.Dre9jg._WKs7uv9uOlZtYbR9Rz2W7uZdtc";
-        builder.setToken(token);
-        builder.addEventListener(new Main());
-        builder.buildAsync();
+
+    public static void main(String[] args) {
+
+        try {
+            JDA jda = new JDABuilder("MzgzOTg3ODUwODcxNDM5MzYy.Dre9jg._WKs7uv9uOlZtYbR9Rz2W7uZdtc")
+                    .addEventListener(new Main())
+                    .build();
+            jda.awaitReady();
+            System.out.println("Finished Building JDA!");
+        } catch (LoginException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public void onReady(ReadyEvent event) {
@@ -28,23 +33,62 @@ public class Main extends ListenerAdapter {
 
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
-        if (!event.getAuthor().isBot()) {
-            System.out.println("Message from " + event.getAuthor() + "in " + event.getChannel() + ": " + event.getMessage().getContentDisplay());
 
-            if (event.getMessage().getContentRaw().toLowerCase().startsWith("!ping")) {
-                cmd_ping(event);
+        JDA jda = event.getJDA();
+        long responseNumber = event.getResponseNumber();
+
+
+        User author = event.getAuthor();
+        Message message = event.getMessage();
+        MessageChannel channel = event.getChannel();
+
+
+        String msg = message.getContentDisplay();
+
+
+        boolean bot = author.isBot();
+
+        if (event.isFromType(ChannelType.TEXT)) {
+
+            Guild guild = event.getGuild();
+            TextChannel textChannel = event.getTextChannel();
+            Member member = event.getMember();
+
+            String name;
+            if (message.isWebhookMessage()) {
+                name = author.getName();
+            } else {
+                name = member.getEffectiveName();
             }
 
-            if (event.getMessage().getContentRaw().toLowerCase().startsWith("!time")) {
-                cmd_time(event);
+            System.out.printf("(%s)[%s]<%s>: %s\n", guild.getName(), textChannel.getName(), name, msg);
+        } else if (event.isFromType(ChannelType.PRIVATE)) {
+
+
+            PrivateChannel privateChannel = event.getPrivateChannel();
+
+            System.out.printf("[PRIV]<%s>: %s\n", author.getName(), msg);
+        }
+
+
+        if (! author.isBot()) {
+
+
+            if (msg.toLowerCase().startsWith("!ping")) {
+                new cmd_Ping(event);
             }
 
-            if (event.getMessage().getContentRaw().toLowerCase().startsWith("!8ball")) {
-                cmd_8ball(event);
+            if (msg.toLowerCase().startsWith("!time")) {
+                new cmd_Time(event);
+            }
+
+            if (msg.toLowerCase().startsWith("!8ball")) {
+                new cmd_8Ball(event);
             }
         }
     }
 
+    /*
     private static void cmd_ping(MessageReceivedEvent event) {
         System.out.println("Executing cmd_ping...");
         event.getChannel().sendMessage("Pong!").queue();
@@ -74,4 +118,5 @@ public class Main extends ListenerAdapter {
         Integer randInt = new Random().nextInt(9);
         event.getChannel().sendMessage(answers[randInt]).queue();
     }
+    */
 }
