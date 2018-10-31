@@ -3,7 +3,6 @@ image: java:8-jdk
 stages:
   - build
   - test
-  - deploy
 
 before_script:
 #  - echo `pwd` # debug
@@ -31,10 +30,6 @@ test:
   script:
     - ./gradlew check
 
-deploy:
-  stage: deploy
-  script:
-    - ./deploy
 
 after_script:
   - echo "End CI"
