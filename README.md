@@ -1,0 +1,1 @@
+[![pipeline status](http://s1.arno.tk:8084/sglorch/discordbot/badges/master/pipeline.svg)](http://s1.arno.tk:8084/sglorch/discordbot/commits/master)
