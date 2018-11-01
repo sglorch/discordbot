@@ -87,7 +87,8 @@ public class Main extends ListenerAdapter {
             }
 
             if (msg.toLowerCase().startsWith("==music")) {
-                new cmd_Music(event);
+                String[] cmdArgs = event.getMessage().getContentRaw().split(" ", 3);
+                new cmd_Music(event, cmdArgs);
             }
         }
     }

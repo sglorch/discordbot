@@ -47,6 +47,6 @@ public class cmd_8Ball {
                 "Very doubtful."
         };
         Integer randInt = new Random().nextInt(20);
-        event.getChannel().sendMessage(answers[randInt]).queue();
+        event.getChannel().sendMessage(":8ball: " + answers[randInt]).queue();
     }
 }
