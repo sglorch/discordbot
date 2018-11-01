@@ -74,49 +74,21 @@ public class Main extends ListenerAdapter {
         if (! author.isBot()) {
 
 
-            if (msg.toLowerCase().startsWith("!ping")) {
-                new cmd_Ping(event);
+            if (msg.toLowerCase().startsWith("==ping")) {
+                new cmd_Ping(event, jda.getPing());
             }
 
-            if (msg.toLowerCase().startsWith("!time")) {
+            if (msg.toLowerCase().startsWith("==time")) {
                 new cmd_Time(event);
             }
 
-            if (msg.toLowerCase().startsWith("!8ball")) {
+            if (msg.toLowerCase().startsWith("==8ball")) {
                 new cmd_8Ball(event);
+            }
+
+            if (msg.toLowerCase().startsWith("==music")) {
+                new cmd_Music(event);
             }
         }
     }
-
-    /*
-    private static void cmd_ping(MessageReceivedEvent event) {
-        System.out.println("Executing cmd_ping...");
-        event.getChannel().sendMessage("Pong!").queue();
-    }
-
-    private static void cmd_time(MessageReceivedEvent event) {
-        System.out.println("Executing cmd_time...");
-        LocalDateTime timePoint = LocalDateTime.now();
-        LocalDateTime truncatedTime = timePoint.truncatedTo(ChronoUnit.SECONDS);
-        String time = truncatedTime.format(DateTimeFormatter.ofPattern("dd.MM.yyy - HH:mm:ss"));
-        event.getChannel().sendMessage("The time and date is: " + time).queue();
-    }
-
-    private static void cmd_8ball(MessageReceivedEvent event) {
-        System.out.println("Executing cmd_ping...");
-        String[] answers = {
-                "Absolutely!",
-                "Yes, sure.",
-                "Of course!",
-                "Maybe...",
-                "This can't be said.",
-                "No, simply no!",
-                "Why are you even asking?!",
-                "Are you kidding me?",
-                "There is nothing that true."
-        };
-        Integer randInt = new Random().nextInt(9);
-        event.getChannel().sendMessage(answers[randInt]).queue();
-    }
-    */
 }

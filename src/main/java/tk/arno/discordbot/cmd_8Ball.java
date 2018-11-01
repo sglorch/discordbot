@@ -8,6 +8,7 @@ public class cmd_8Ball {
     public cmd_8Ball(MessageReceivedEvent event) {
         System.out.println("Executing cmd_8Ball...");
         String[] answers = {
+                /*
                 "Absolutely!",
                 "Yes, sure.",
                 "Of course!",
@@ -17,8 +18,35 @@ public class cmd_8Ball {
                 "Why are you even asking?!",
                 "Are you kidding me?",
                 "There is nothing that true."
+                */
+
+                //affirmative
+                "It is Certain.",
+                "It is decicedly so.",
+                "Without a doubt.",
+                "Yes - definitely.",
+                "You may rely on it.",
+                "As I see it, yes.",
+                "Most likely.",
+                "Outlook good.",
+                "Yes.",
+                "Signs point to yes.",
+
+                //non-commital
+                "Reply hazy, try again.",
+                "Ask again later.",
+                "Better not tell you now.",
+                "Cannot predict now.",
+                "Concentrate and ask again.",
+
+                //negative
+                "Don't count on it.",
+                "My reply is no.",
+                "My sources say no.",
+                "Outlook not so good.",
+                "Very doubtful."
         };
-        Integer randInt = new Random().nextInt(9);
+        Integer randInt = new Random().nextInt(20);
         event.getChannel().sendMessage(answers[randInt]).queue();
     }
 }
