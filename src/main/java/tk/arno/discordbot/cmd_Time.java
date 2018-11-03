@@ -6,8 +6,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
-public class cmd_Time {
-    public cmd_Time(MessageReceivedEvent event) {
+class cmd_Time {
+    cmd_Time(MessageReceivedEvent event) {
         System.out.println("Executing cmd_Time...");
         LocalDateTime timePoint = LocalDateTime.now();
         LocalDateTime truncatedTime = timePoint.truncatedTo(ChronoUnit.SECONDS);

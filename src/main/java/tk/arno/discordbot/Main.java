@@ -1,5 +1,8 @@
 package tk.arno.discordbot;
 
+import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
+import com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager;
+import com.sedmelluq.discord.lavaplayer.source.AudioSourceManagers;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
 import net.dv8tion.jda.core.entities.*;
@@ -10,9 +13,15 @@ import javax.security.auth.login.LoginException;
 
 public class Main extends ListenerAdapter {
 
+    AudioPlayerManager playerManager;
+
+    public Main() {
+        playerManager = new DefaultAudioPlayerManager();
+        AudioSourceManagers.registerRemoteSources(playerManager);
+    }
 
     public static void main(String[] args) {
-
+        new Main();
         try {
             JDA jda = new JDABuilder("MzgzOTg3ODUwODcxNDM5MzYy.Dre9jg._WKs7uv9uOlZtYbR9Rz2W7uZdtc")
                     .addEventListener(new Main())
@@ -87,8 +96,12 @@ public class Main extends ListenerAdapter {
             }
 
             if (msg.toLowerCase().startsWith("==music")) {
-                String[] cmdArgs = event.getMessage().getContentRaw().split(" ", 3);
-                new cmd_Music(event, cmdArgs);
+                if (!event.isFromType(ChannelType.PRIVATE) && !event.isFromType(ChannelType.GROUP)) {
+                    String[] cmdArgs = event.getMessage().getContentRaw().split(" ", 3);
+                    new cmd_Music(event, cmdArgs, playerManager);
+                } else {
+                    event.getChannel().sendMessage("Sorry, this command can only be used inside a server!").queue();
+                }
             }
         }
     }

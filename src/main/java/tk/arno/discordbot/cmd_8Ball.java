@@ -4,8 +4,8 @@ import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 
 import java.util.Random;
 
-public class cmd_8Ball {
-    public cmd_8Ball(MessageReceivedEvent event) {
+class cmd_8Ball {
+    cmd_8Ball(MessageReceivedEvent event) {
         System.out.println("Executing cmd_8Ball...");
         String[] answers = {
                 /*
@@ -46,7 +46,7 @@ public class cmd_8Ball {
                 "Outlook not so good.",
                 "Very doubtful."
         };
-        Integer randInt = new Random().nextInt(20);
+        int randInt = new Random().nextInt(20);
         event.getChannel().sendMessage(":8ball: " + answers[randInt]).queue();
     }
 }
