@@ -108,6 +108,8 @@ class cmd_Music {
             }
         } else if (args[1].equalsIgnoreCase("skip")) {
             skipTrack();
+        } else if (args[1].equalsIgnoreCase("volume")) {
+            setVolume(args[2]);
         }
     }
 
@@ -172,5 +174,10 @@ class cmd_Music {
         musicManager.scheduler.nextTrack();
 
         event.getChannel().sendMessage("Skipped to next track...").queue();
+    }
+
+    private void setVolume(String volume) {
+        GuildMusicManager musicManager = getGuildAudioPlayer(event.getGuild());
+        musicManager.player.setVolume(Integer.parseInt(volume));
     }
 }
