@@ -46,7 +46,9 @@ class cmd_Music {
     */
         Guild guild = event.getGuild();
 
-
+        /*
+         * Subcommands
+         */
         if (args[1].equalsIgnoreCase("join")) {
             if (! guild.getSelfMember().hasPermission(event.getTextChannel(), Permission.VOICE_CONNECT)) {
                 event.getTextChannel().sendMessage("I don't have the permission to join a voice channel!").queue();
@@ -108,6 +110,8 @@ class cmd_Music {
             skipTrack();
         }
     }
+
+
 
     private void loadAndPlay(final String trackUrl) {
         GuildMusicManager musicManager = getGuildAudioPlayer(event.getGuild());

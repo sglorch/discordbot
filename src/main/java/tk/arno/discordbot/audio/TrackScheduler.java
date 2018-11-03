@@ -16,13 +16,19 @@ public class TrackScheduler extends AudioEventAdapter {
 
     public TrackScheduler(AudioPlayer player) {
         this.player = player;
+        this.player.setFrameBufferDuration(1000);
         this.queue = new LinkedBlockingQueue<>();
     }
 
     public void queue(AudioTrack track) {
+        if (player.getPlayingTrack() != null) {
+            queue.offer(track);
+        } else {
+            player.startTrack(track, false);
+        }/*
         if (! player.startTrack(track, true)) {
             queue.offer(track);
-        }
+        }*/
     }
 
     public void nextTrack() {
