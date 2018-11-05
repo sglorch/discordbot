@@ -1,5 +1,6 @@
 package tk.arno.discordbot;
 
+import com.sedmelluq.discord.lavaplayer.jdaudp.NativeAudioSendFactory;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
 import com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager;
 import com.sedmelluq.discord.lavaplayer.source.AudioSourceManagers;
@@ -18,6 +19,7 @@ public class Main extends ListenerAdapter {
     public Main() {
         playerManager = new DefaultAudioPlayerManager();
         AudioSourceManagers.registerRemoteSources(playerManager);
+        AudioSourceManagers.registerLocalSource(playerManager);
     }
 
     public static void main(String[] args) {
@@ -25,7 +27,8 @@ public class Main extends ListenerAdapter {
         try {
             JDA jda = new JDABuilder("MzgzOTg3ODUwODcxNDM5MzYy.Dre9jg._WKs7uv9uOlZtYbR9Rz2W7uZdtc")
                     .addEventListener(new Main())
-                    .build();
+                    .setAudioSendFactory(new NativeAudioSendFactory())
+                    .buildBlocking();
             jda.awaitReady();
             System.out.println("Finished Building JDA!");
         } catch (LoginException e) {
@@ -44,18 +47,11 @@ public class Main extends ListenerAdapter {
     public void onMessageReceived(MessageReceivedEvent event) {
 
         JDA jda = event.getJDA();
-        long responseNumber = event.getResponseNumber();
-
 
         User author = event.getAuthor();
         Message message = event.getMessage();
-        MessageChannel channel = event.getChannel();
-
 
         String msg = message.getContentDisplay();
-
-
-        boolean bot = author.isBot();
 
         if (event.isFromType(ChannelType.TEXT)) {
 
@@ -78,6 +74,8 @@ public class Main extends ListenerAdapter {
 
             System.out.printf("[PRIV]<%s>: %s\n", author.getName(), msg);
         }
+
+
 
 
         if (! author.isBot()) {

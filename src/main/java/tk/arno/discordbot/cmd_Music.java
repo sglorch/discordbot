@@ -1,7 +1,6 @@
 package tk.arno.discordbot;
 
 import com.sedmelluq.discord.lavaplayer.player.AudioLoadResultHandler;
-import com.sedmelluq.discord.lavaplayer.player.AudioPlayer;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
 import com.sedmelluq.discord.lavaplayer.tools.FriendlyException;
 import com.sedmelluq.discord.lavaplayer.track.AudioPlaylist;
@@ -9,13 +8,11 @@ import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
 
 import net.dv8tion.jda.core.Permission;
 import net.dv8tion.jda.core.entities.Guild;
-import net.dv8tion.jda.core.entities.TextChannel;
 import net.dv8tion.jda.core.entities.VoiceChannel;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.core.managers.AudioManager;
 
 import tk.arno.discordbot.audio.GuildMusicManager;
-import tk.arno.discordbot.audio.TrackScheduler;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -178,6 +175,14 @@ class cmd_Music {
 
     private void setVolume(String volume) {
         GuildMusicManager musicManager = getGuildAudioPlayer(event.getGuild());
-        musicManager.player.setVolume(Integer.parseInt(volume));
+        System.out.println("Current Volume: " + musicManager.player.getVolume());
+        musicManager.getSendHandler().audioPlayer.setVolume(Integer.parseInt(volume));
+        event.getChannel().sendMessage("Set volume to " + volume + "%.");
+        musicManager.getSendHandler().audioPlayer.setPaused(false);
+    }
+
+    private void stopTrack() {
+        GuildMusicManager musicManager = getGuildAudioPlayer(event.getGuild());
+        musicManager.getSendHandler().audioPlayer.stopTrack();
     }
 }
