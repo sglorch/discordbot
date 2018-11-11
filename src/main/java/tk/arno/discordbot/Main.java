@@ -186,5 +186,17 @@ public class Main extends ListenerAdapter {
                 .build()
         ).queue();
     }
+	
+	/*
+			JDA jda = ...
+
+			jda.getTextChannelById(...)
+			jda.getPrivateChannelById(...)
+			jda.getUserById(...).openPrivateChannel().queue(channel -> ...)
+			jda.getGuildById(...).getTextChannelById(...)
+			jda.getGuildById(...).getTextChannels()
+			jda.getGuildById(...).getMemberById(...).getUser().openPrivateChannel().queue(channel -> ...)
+		*/
+	
 }
 
