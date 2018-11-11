@@ -1,7 +1,9 @@
 package tk.arno.discordbot;
 
+import com.sedmelluq.discord.lavaplayer.player.AudioConfiguration;
 import com.sedmelluq.discord.lavaplayer.player.AudioLoadResultHandler;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
+import com.sedmelluq.discord.lavaplayer.player.AudioPlayerOptions;
 import com.sedmelluq.discord.lavaplayer.tools.FriendlyException;
 import com.sedmelluq.discord.lavaplayer.track.AudioPlaylist;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
@@ -98,6 +100,7 @@ class cmd_Music {
                 }
 
                 audioManager.openAudioConnection(theirConnectedChannel);
+                audioManager.setSelfDeafened(true);
                 event.getTextChannel().sendMessage("Successfully connected to your Voice Channel!").queue();
                 loadAndPlay(args[2]);
             } else {
@@ -107,9 +110,16 @@ class cmd_Music {
             skipTrack();
         } else if (args[1].equalsIgnoreCase("volume")) {
             setVolume(args[2]);
+        } else if (args[1].equalsIgnoreCase("stop")) {
+            stopTrack();
+        } else if (args[1].equalsIgnoreCase("pause")) {
+            if (getGuildAudioPlayer(event.getGuild()).player.isPaused()) {
+                getGuildAudioPlayer(event.getGuild()).player.setPaused(false);
+            } else  {
+                getGuildAudioPlayer(event.getGuild()).player.setPaused(true);
+            }
         }
     }
-
 
 
     private void loadAndPlay(final String trackUrl) {
@@ -146,6 +156,9 @@ class cmd_Music {
                 event.getChannel().sendMessage("Could not play: " + exception.getMessage()).queue();
             }
         });
+        playerManager.getConfiguration().setOpusEncodingQuality(AudioConfiguration.OPUS_QUALITY_MAX);
+        playerManager.getConfiguration().setResamplingQuality(AudioConfiguration.ResamplingQuality.HIGH);
+        playerManager.setPlayerCleanupThreshold(30000);
     }
 
     private void play(GuildMusicManager musicManager, AudioTrack track) {
@@ -173,12 +186,14 @@ class cmd_Music {
         event.getChannel().sendMessage("Skipped to next track...").queue();
     }
 
-    private void setVolume(String volume) {
+    private synchronized void setVolume(String volume) {
         GuildMusicManager musicManager = getGuildAudioPlayer(event.getGuild());
-        System.out.println("Current Volume: " + musicManager.player.getVolume());
-        musicManager.getSendHandler().audioPlayer.setVolume(Integer.parseInt(volume));
-        event.getChannel().sendMessage("Set volume to " + volume + "%.");
-        musicManager.getSendHandler().audioPlayer.setPaused(false);
+        //System.out.println("Current Volume: " + musicManager.player.getVolume());
+        //musicManager.getSendHandler().audioPlayer.setVolume(Integer.parseInt(volume));
+        //event.getChannel().sendMessage("Set volume to " + volume + "%.");
+        System.out.println("Current Volume: " + getGuildAudioPlayer(event.getGuild()).player.getVolume());
+        getGuildAudioPlayer(event.getGuild()).player.setVolume(Integer.parseInt(volume));
+        event.getChannel().sendMessage("Set volume to " + getGuildAudioPlayer(event.getGuild()).player.getVolume() + "%.").queue();
     }
 
     private void stopTrack() {

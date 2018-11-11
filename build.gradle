@@ -22,4 +22,6 @@ dependencies {
     compile 'ch.qos.logback:logback-classic:1.0.13'
     compile 'com.mashape.unirest:unirest-java:1.4.9'
     compile 'com.jagrosh:jda-utilities:2.1.4'
+    compile 'org.xerial:sqlite-jdbc:3.21.0.1'
+    compile 'com.zaxxer:HikariCP:2.7.4'
 }
