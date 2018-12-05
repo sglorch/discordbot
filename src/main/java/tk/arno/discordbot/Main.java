@@ -5,41 +5,53 @@ import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
 import com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager;
 import com.sedmelluq.discord.lavaplayer.source.AudioSourceManagers;
 import com.sedmelluq.discord.lavaplayer.tools.PlayerLibrary;
+
 import net.dv8tion.jda.core.EmbedBuilder;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
 import net.dv8tion.jda.core.JDAInfo;
 import net.dv8tion.jda.core.entities.*;
 import net.dv8tion.jda.core.events.ReadyEvent;
-import net.dv8tion.jda.core.events.channel.priv.PrivateChannelCreateEvent;
 import net.dv8tion.jda.core.events.guild.member.GuildMemberJoinEvent;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
-import net.dv8tion.jda.core.utils.Helpers;
-import org.apache.commons.logging.impl.SimpleLog;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import org.sqlite.SQLiteJDBCLoader;
 
 import javax.security.auth.login.LoginException;
 import java.awt.*;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.concurrent.TimeUnit;
 
 import static java.lang.System.currentTimeMillis;
 
 public class Main extends ListenerAdapter {
 
-    public static final String VERSION = "1.3";
-    public static final Long startTime = currentTimeMillis();
-    public static int executedCmds = 0;
+    private static final String VERSION = "1.2-SNAPSHOT";
+    private static final Long startTime = currentTimeMillis();
+    private static int executedCmds = 0;
     public static Logger LOG = LoggerFactory.getLogger("ARnoBot");
+    private static String GIPHY_API_KEY = "";
+    private static String BOT_TOKEN = "";
 
 
-    AudioPlayerManager playerManager;
+    private AudioPlayerManager playerManager;
 
     public Main() {
+        try {
+
+            GIPHY_API_KEY = new String(Files.readAllBytes(Paths.get("giphy.txt")));
+            BOT_TOKEN = new String(Files.readAllBytes(Paths.get("token.txt")));
 
 
+        } catch (IOException e) {
+            System.out.println("Something went wrong reading your configurations!");
+        }
         playerManager = new DefaultAudioPlayerManager();
         AudioSourceManagers.registerRemoteSources(playerManager);
         AudioSourceManagers.registerLocalSource(playerManager);
@@ -48,7 +60,7 @@ public class Main extends ListenerAdapter {
     public static void main(String[] args) {
         new Main();
         try {
-            JDA jda = new JDABuilder("MzgzOTg3ODUwODcxNDM5MzYy.Dre9jg._WKs7uv9uOlZtYbR9Rz2W7uZdtc")
+            JDA jda = new JDABuilder(BOT_TOKEN)
                     .addEventListener(new Main())
                     .setAudioSendFactory(new NativeAudioSendFactory())
                     .build();
@@ -154,6 +166,11 @@ public class Main extends ListenerAdapter {
                 printStats(event);
                 executedCmds++;
             }
+
+            if (msg.toLowerCase().startsWith("==gif")) {
+                String[] cmdArgs = event.getMessage().getContentRaw().split(" ", 3);
+                new cmd_Gif(event, cmdArgs, GIPHY_API_KEY);
+            }
         }
     }
 
@@ -182,7 +199,7 @@ public class Main extends ListenerAdapter {
                 .setColor(Color.red)
                 .setAuthor("Stats since last restart:")
                 .appendDescription("Executed commands: " + executedCmds)
-                .appendDescription("Uptime: " + String.format("%02d h, %02d min, %02d sec",TimeUnit.MILLISECONDS.toHours(runtime), TimeUnit.MILLISECONDS.toMinutes(runtime), TimeUnit.MILLISECONDS.toSeconds(runtime) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(runtime))))
+                .appendDescription("Uptime: " + String.format("%02d h, %02d min, %02d sec", TimeUnit.MILLISECONDS.toHours(runtime), TimeUnit.MILLISECONDS.toMinutes(runtime), TimeUnit.MILLISECONDS.toSeconds(runtime) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(runtime))))
                 .build()
         ).queue();
     }
@@ -197,6 +214,6 @@ public class Main extends ListenerAdapter {
 			jda.getGuildById(...).getTextChannels()
 			jda.getGuildById(...).getMemberById(...).getUser().openPrivateChannel().queue(channel -> ...)
 		*/
-	
+
 }
 
