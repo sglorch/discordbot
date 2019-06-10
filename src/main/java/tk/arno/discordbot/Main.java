@@ -18,6 +18,8 @@ import net.dv8tion.jda.core.hooks.ListenerAdapter;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import io.sentry.Sentry;
+
 
 import org.sqlite.SQLiteJDBCLoader;
 
@@ -43,14 +45,13 @@ public class Main extends ListenerAdapter {
     private AudioPlayerManager playerManager;
 
     public Main() {
+      Sentry.init("https://6b12b999a58e403ab346f59f2646c517@sentry.io/1478624");
         try {
-
             GIPHY_API_KEY = new String(Files.readAllBytes(Paths.get("giphy.txt")));
             BOT_TOKEN = new String(Files.readAllBytes(Paths.get("token.txt")));
-
-
         } catch (IOException e) {
             System.out.println("Something went wrong reading your configurations!");
+            Sentry.capture(e);
         }
         playerManager = new DefaultAudioPlayerManager();
         AudioSourceManagers.registerRemoteSources(playerManager);
@@ -68,8 +69,10 @@ public class Main extends ListenerAdapter {
             System.out.println("Finished Building JDA!");
         } catch (LoginException e) {
             e.printStackTrace();
+            Sentry.capture(e);
         } catch (InterruptedException e) {
             e.printStackTrace();
+            Sentry.capture(e);
         }
     }
 
@@ -203,7 +206,7 @@ public class Main extends ListenerAdapter {
                 .build()
         ).queue();
     }
-	
+
 	/*
 			JDA jda = ...
 
@@ -216,4 +219,3 @@ public class Main extends ListenerAdapter {
 		*/
 
 }
-

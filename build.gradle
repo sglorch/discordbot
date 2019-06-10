@@ -25,4 +25,5 @@ dependencies {
     compile 'org.xerial:sqlite-jdbc:3.21.0.1'
     compile 'com.zaxxer:HikariCP:2.7.4'
     compile group: 'at.mukprojects', name: 'giphy4j', version: '1.0.1'
+    compile 'io.sentry:sentry:1.7.16'
 }
