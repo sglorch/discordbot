@@ -16,9 +16,9 @@ import net.dv8tion.jda.core.events.guild.member.GuildMemberJoinEvent;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import io.sentry.Sentry;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
+//import io.sentry.Sentry;
 
 
 import org.sqlite.SQLiteJDBCLoader;
@@ -51,7 +51,7 @@ public class Main extends ListenerAdapter {
             BOT_TOKEN = new String(Files.readAllBytes(Paths.get("token.txt"))).trim();
         } catch (IOException e) {
             System.out.println("Something went wrong reading your configurations!");
-            Sentry.capture(e);
+            //Sentry.capture(e);
         }
         playerManager = new DefaultAudioPlayerManager();
         AudioSourceManagers.registerRemoteSources(playerManager);
@@ -69,10 +69,10 @@ public class Main extends ListenerAdapter {
             System.out.println("Finished Building JDA!");
         } catch (LoginException e) {
             e.printStackTrace();
-            Sentry.capture(e);
+            //Sentry.capture(e);
         } catch (InterruptedException e) {
             e.printStackTrace();
-            Sentry.capture(e);
+            //Sentry.capture(e);
         }
     }
 
