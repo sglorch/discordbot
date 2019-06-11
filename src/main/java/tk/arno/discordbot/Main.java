@@ -47,8 +47,8 @@ public class Main extends ListenerAdapter {
     public Main() {
       Sentry.init("https://6b12b999a58e403ab346f59f2646c517@sentry.io/1478624");
         try {
-            GIPHY_API_KEY = new String(Files.readAllBytes(Paths.get("giphy.txt"))).toString().trim();
-            BOT_TOKEN = new String(Files.readAllBytes(Paths.get("token.txt"))).toString().trim();
+            GIPHY_API_KEY = Files.readAllLines(Paths.get("giphy.txt")).get(0);
+            BOT_TOKEN = Files.readAllLines(Paths.get("token.txt")).get(0);
         } catch (IOException e) {
             System.out.println("Something went wrong reading your configurations!");
             Sentry.capture(e);
