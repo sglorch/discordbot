@@ -37,7 +37,7 @@ public class Main extends ListenerAdapter {
     private static final String VERSION = "1.3-SNAPSHOT";
     private static final Long startTime = currentTimeMillis();
     private static int executedCmds = 0;
-    public static Logger LOG = LoggerFactory.getLogger("ARnoBot");
+    //public static Logger LOG = LoggerFactory.getLogger("ARnoBot");
     private static String GIPHY_API_KEY = "";
     private static String BOT_TOKEN = "";
 
@@ -45,7 +45,7 @@ public class Main extends ListenerAdapter {
     private AudioPlayerManager playerManager;
 
     public Main() {
-      Sentry.init("https://6b12b999a58e403ab346f59f2646c517@sentry.io/1478624");
+      //Sentry.init("https://6b12b999a58e403ab346f59f2646c517@sentry.io/1478624");
         try {
             GIPHY_API_KEY = new String(Files.readAllBytes(Paths.get("giphy.txt"))).trim();
             BOT_TOKEN = new String(Files.readAllBytes(Paths.get("token.txt"))).trim();
