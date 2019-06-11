@@ -34,7 +34,7 @@ import static java.lang.System.currentTimeMillis;
 
 public class Main extends ListenerAdapter {
 
-    private static final String VERSION = "1.2-SNAPSHOT";
+    private static final String VERSION = "1.3-SNAPSHOT";
     private static final Long startTime = currentTimeMillis();
     private static int executedCmds = 0;
     public static Logger LOG = LoggerFactory.getLogger("ARnoBot");
@@ -207,15 +207,15 @@ public class Main extends ListenerAdapter {
         ).queue();
     }
 
-	/*
-			JDA jda = ...
+  /*
+      JDA jda = ...
 
-			jda.getTextChannelById(...)
-			jda.getPrivateChannelById(...)
-			jda.getUserById(...).openPrivateChannel().queue(channel -> ...)
-			jda.getGuildById(...).getTextChannelById(...)
-			jda.getGuildById(...).getTextChannels()
-			jda.getGuildById(...).getMemberById(...).getUser().openPrivateChannel().queue(channel -> ...)
-		*/
+      jda.getTextChannelById(...)
+      jda.getPrivateChannelById(...)
+      jda.getUserById(...).openPrivateChannel().queue(channel -> ...)
+      jda.getGuildById(...).getTextChannelById(...)
+      jda.getGuildById(...).getTextChannels()
+      jda.getGuildById(...).getMemberById(...).getUser().openPrivateChannel().queue(channel -> ...)
+    */
 
 }
