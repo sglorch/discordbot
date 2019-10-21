@@ -19,8 +19,6 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 //import org.slf4j.Logger;
 //import org.slf4j.LoggerFactory;
 import io.sentry.Sentry;
-
-
 import org.sqlite.SQLiteJDBCLoader;
 
 import javax.security.auth.login.LoginException;
@@ -67,10 +65,7 @@ public class Main extends ListenerAdapter {
                     .build();
             jda.awaitReady();
             System.out.println("Finished Building JDA!");
-        } catch (LoginException e) {
-            e.printStackTrace();
-            Sentry.capture(e);
-        } catch (InterruptedException e) {
+        } catch (LoginException | InterruptedException e) {
             e.printStackTrace();
             Sentry.capture(e);
         }
@@ -187,7 +182,7 @@ public class Main extends ListenerAdapter {
                 .appendDescription(" | SQLite " + SQLiteJDBCLoader.getVersion() + "\n")
                 .appendDescription(" | " + System.getProperty("sun.arch.data.model") + "-bit JVM" + "\n")
                 .appendDescription(" | " + os + " " + arch + "\n")
-                .setFooter("ARnoBot, developed by ARnonym123", "https://i.imgur.com/GQ3LdW5.jpg")
+                .setFooter("ARnoBot, developed by ARnonym123", "")
                 .setColor(Color.red)
                 .setAuthor("Versions:")
                 .build()
@@ -206,16 +201,4 @@ public class Main extends ListenerAdapter {
                 .build()
         ).queue();
     }
-
-  /*
-      JDA jda = ...
-
-      jda.getTextChannelById(...)
-      jda.getPrivateChannelById(...)
-      jda.getUserById(...).openPrivateChannel().queue(channel -> ...)
-      jda.getGuildById(...).getTextChannelById(...)
-      jda.getGuildById(...).getTextChannels()
-      jda.getGuildById(...).getMemberById(...).getUser().openPrivateChannel().queue(channel -> ...)
-    */
-
 }

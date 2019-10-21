@@ -10,7 +10,7 @@ class cmd_Ping {
         event.getChannel().sendMessage(
                 new EmbedBuilder()
                         .appendDescription("My ping is: " + ping + "ms")
-                        .setFooter("ARnoBot, developed by ARnonym123", "https://i.imgur.com/GQ3LdW5.jpg")
+                        .setFooter("ARnoBot, developed by ARnonym123", "")
                         .setColor(Color.red)
                         .setTitle("Ping to Discord API")
                         .build())

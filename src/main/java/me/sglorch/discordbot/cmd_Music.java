@@ -29,17 +29,7 @@ class cmd_Music {
         this.event = event;
         this.args = args;
         this.musicManagers = new HashMap<>();
-    /*
-        try {
-            List<String> allowedIds = Files.readAllLines(Paths.get("admins.txt"));
-            if (! allowedIds.contains(event.getAuthor().getId())) {
-                return;
-            }
-        } catch (IOException ignored) {
-        }
-    */
         Guild guild = event.getGuild();
-
         /*
          * Subcommands
          */

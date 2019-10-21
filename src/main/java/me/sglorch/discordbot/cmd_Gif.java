@@ -5,7 +5,7 @@ import at.mukprojects.giphy4j.entity.search.SearchRandom;
 import at.mukprojects.giphy4j.exception.GiphyException;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
-public class cmd_Gif {
+class cmd_Gif {
 
     cmd_Gif(MessageReceivedEvent event, String[] args, String apiKey) {
         event.getChannel().sendTyping().queue();

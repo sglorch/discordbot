@@ -1,7 +1,6 @@
 package me.sglorch.discordbot;
 
 import com.zaxxer.hikari.HikariDataSource;
-
 import java.sql.*;
 import java.util.ArrayList;
 
