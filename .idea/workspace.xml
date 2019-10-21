@@ -50,12 +50,30 @@
     </treeState>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7744da73-b29c-4d54-8bc6-c74390a06ed3" name="Default Changelist" comment="Changes:&#10;+ GIF-command">
+    <list default="true" id="7744da73-b29c-4d54-8bc6-c74390a06ed3" name="Default Changelist" comment="Changes:&#10;+ Updated dependencies&#10;+ Updated JAA to V4">
+      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/discordbot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tk/arno/discordbot/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tk/arno/discordbot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tk/arno/discordbot/audio/AudioPlayerSendHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/audio/AudioPlayerSendHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tk/arno/discordbot/audio/GuildMusicManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/audio/GuildMusicManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tk/arno/discordbot/audio/TrackScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/audio/TrackScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tk/arno/discordbot/cmd_8Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/cmd_8Ball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tk/arno/discordbot/cmd_Gif.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/cmd_Gif.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tk/arno/discordbot/cmd_Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/cmd_Music.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tk/arno/discordbot/cmd_Ping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/cmd_Ping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tk/arno/discordbot/cmd_Time.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/cmd_Time.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/.gradle/" />
-    <ignored path="$PROJECT_DIR$/build/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +119,13 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="discordbot" type="f1a62948:ProjectNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="discordbot" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -110,111 +134,6 @@
       </state>
     </system>
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tk/arno/discordbot/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="27" lean-forward="true" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tk/arno/discordbot/cmd_Gif.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tk/arno/discordbot/Database.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tk/arno/discordbot/cmd_Music.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1156">
-              <caret line="90" column="17" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tk/arno/discordbot/audio/TrackScheduler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1179#1180#0" expanded="true" />
-                <element signature="e#1232#1233#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tk/arno/discordbot/cmd_Time.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tk/arno/discordbot/cmd_8Ball.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="48" column="47" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -222,75 +141,14 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>event.getMessage().getContentRaw()</find>
-      <find>GuildMusicManager</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>msg</replace>
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/Main.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tk/arno/discordbot/audio/AudioInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tk/arno/discordbot/audio/TrackManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tk/arno/discordbot/audio/PlayerAudioSendHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tk/arno/discordbot/cmd_Time.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tk/arno/discordbot/cmd_8Ball.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tk/arno/discordbot/audio/TrackSheduler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tk/arno/discordbot/audio/GuildMusicManager.java" />
-        <option value="$PROJECT_DIR$/.gitlab-ci.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/tk/arno/discordbot/audio/AudioPlayerSendHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tk/arno/discordbot/utils/Config.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tk/arno/discordbot/cmd_Ping.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tk/arno/discordbot/audio/TrackScheduler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tk/arno/discordbot/Database.java" />
-        <option value="$PROJECT_DIR$/giphy.txt" />
-        <option value="$PROJECT_DIR$/token.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/tk/arno/discordbot/cmd_Gif.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tk/arno/discordbot/cmd_Music.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/tk/arno/discordbot/Main.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="3856" />
-    <option name="height" value="2176" />
-  </component>
+  <component name="ProjectId" id="1QNLfalcxgyY57jYGBQXWB3yLex" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="discordbot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="discordbot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="player&#9;PSI&#9;JAVA://tk.arno.discordbot.audio.AudioPlayerSendHandler#audioPlayer" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -316,7 +174,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Gradle.discordbot [build]">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tk.arno.discordbot.Main" />
       <module name="discordbot_main" />
@@ -331,6 +189,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="discordbot [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="discordbot [check]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -343,26 +220,6 @@
         <option name="taskNames">
           <list>
             <option value="check" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <extension name="recording" autostart="false" />
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="discordbot [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -413,18 +270,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="Gradle.discordbot [clean]" />
       <item itemvalue="Gradle.discordbot [processResources]" />
       <item itemvalue="Gradle.discordbot [check]" />
       <item itemvalue="Gradle.discordbot [run]" />
+      <item itemvalue="Gradle.discordbot [build]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.discordbot [build]" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.discordbot [run]" />
         <item itemvalue="Gradle.discordbot [check]" />
         <item itemvalue="Gradle.discordbot [processResources]" />
-        <item itemvalue="Gradle.discordbot [clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -458,7 +315,9 @@
       <workItem from="1543346104122" duration="602000" />
       <workItem from="1544033024999" duration="6094000" />
       <workItem from="1560176321440" duration="1198000" />
-      <workItem from="1560286251293" duration="967000" />
+      <workItem from="1560286251293" duration="1568000" />
+      <workItem from="1567606222976" duration="24000" />
+      <workItem from="1571651342534" duration="1036000" />
     </task>
     <task id="LOCAL-00001" summary="Init files IntelliJ">
       <created>1540761077991</created>
@@ -594,50 +453,19 @@
       <configuration name="discordbot [check]" configurationId="GradleRunConfiguration" />
     </history-entry>
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81497000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="3856" height="2176" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.079293996" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48946258" weight="0.125857" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49894625" weight="0.32892805" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4993565" weight="0.32931727" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50105375" side_tool="true" visible="true" weight="0.26676455" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.48970398" weight="0.32908913" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="TeamCity" order="13" sideWeight="0.49367756" weight="0.32957885" />
-      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24967825" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Gradle" order="6" visible="true" weight="0.23709168" />
-      <window_info anchor="right" id="Database" order="7" weight="0.27606177" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" id="Maven" order="10" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init files IntelliJ" />
@@ -654,160 +482,8 @@
     <MESSAGE value="Changes:&#10;+ Added Volume command" />
     <MESSAGE value="Changes:" />
     <MESSAGE value="Changes:&#10;+ GIF-command" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes:&#10;+ GIF-command" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gradlew.bat">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradlew">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tk/arno/discordbot/audio/AudioInfo.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/tk/arno/discordbot/audio/TrackManager.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/tk/arno/discordbot/audio/PlayerAudioSendHandler.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/dinosparkour/Config.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/dinosparkour/Bot.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/dinosparkour/audio/AudioPlayerSendHandler.java" />
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/classes/java/main/tk/arno/discordbot/Main.class" />
-    <entry file="file://$PROJECT_DIR$/out/production/classes/tk/arno/discordbot/cmd_Time.class" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" />
-    <entry file="file://$PROJECT_DIR$/README.md" />
-    <entry file="file://$PROJECT_DIR$/.gitlab-ci.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.dv8tion/JDA/3.8.1_439/fffad54378c97c6b369e54159b7ca1681aec67e3/JDA-3.8.1_439-sources.jar!/net/dv8tion/jda/core/hooks/ListenerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1972">
-          <caret line="199" column="74" selection-start-line="199" selection-start-column="4" selection-end-line="199" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tk/arno/discordbot/audio/GuildMusicManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#521#522#0" expanded="true" />
-            <element signature="e#578#579#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tk/arno/discordbot/utils/Config.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/tk/arno/discordbot/audio/AudioPlayerSendHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tk/arno/discordbot/cmd_Ping.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="70" selection-start-line="11" selection-start-column="70" selection-end-line="11" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/giphy.txt" />
-    <entry file="file://$PROJECT_DIR$/token.txt" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/tk/arno/discordbot/cmd_Gif.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tk/arno/discordbot/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tk/arno/discordbot/cmd_Music.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="90" column="17" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tk/arno/discordbot/audio/TrackScheduler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1179#1180#0" expanded="true" />
-            <element signature="e#1232#1233#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tk/arno/discordbot/cmd_Time.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tk/arno/discordbot/cmd_8Ball.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="48" column="47" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tk/arno/discordbot/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="27" lean-forward="true" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
+    <MESSAGE value="Changes:&#10;+ Updated dependencies&#10;+ Updated JAA to V4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes:&#10;+ Updated dependencies&#10;+ Updated JAA to V4" />
   </component>
   <component name="gradleExecuteTaskHistory">
     <option value="" />

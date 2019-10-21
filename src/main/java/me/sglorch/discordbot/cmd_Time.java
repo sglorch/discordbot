@@ -1,6 +1,6 @@
-package tk.arno.discordbot;
+package me.sglorch.discordbot;
 
-import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
+import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

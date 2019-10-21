@@ -1,9 +1,9 @@
-package tk.arno.discordbot;
+package me.sglorch.discordbot;
 
 import at.mukprojects.giphy4j.Giphy;
 import at.mukprojects.giphy4j.entity.search.SearchRandom;
 import at.mukprojects.giphy4j.exception.GiphyException;
-import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
+import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 public class cmd_Gif {
 

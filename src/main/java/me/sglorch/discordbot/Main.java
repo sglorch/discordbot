@@ -1,4 +1,4 @@
-package tk.arno.discordbot;
+package me.sglorch.discordbot;
 
 import com.sedmelluq.discord.lavaplayer.jdaudp.NativeAudioSendFactory;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
@@ -6,15 +6,15 @@ import com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager;
 import com.sedmelluq.discord.lavaplayer.source.AudioSourceManagers;
 import com.sedmelluq.discord.lavaplayer.tools.PlayerLibrary;
 
-import net.dv8tion.jda.core.EmbedBuilder;
-import net.dv8tion.jda.core.JDA;
-import net.dv8tion.jda.core.JDABuilder;
-import net.dv8tion.jda.core.JDAInfo;
-import net.dv8tion.jda.core.entities.*;
-import net.dv8tion.jda.core.events.ReadyEvent;
-import net.dv8tion.jda.core.events.guild.member.GuildMemberJoinEvent;
-import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
-import net.dv8tion.jda.core.hooks.ListenerAdapter;
+import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.JDA;
+import net.dv8tion.jda.api.JDABuilder;
+import net.dv8tion.jda.api.JDAInfo;
+import net.dv8tion.jda.api.entities.*;
+import net.dv8tion.jda.api.events.ReadyEvent;
+import net.dv8tion.jda.api.events.guild.member.GuildMemberJoinEvent;
+import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
+import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
 //import org.slf4j.Logger;
 //import org.slf4j.LoggerFactory;
@@ -34,7 +34,7 @@ import static java.lang.System.currentTimeMillis;
 
 public class Main extends ListenerAdapter {
 
-    private static final String VERSION = "1.3-SNAPSHOT";
+    private static final String VERSION = "2.0-SNAPSHOT";
     private static final Long startTime = currentTimeMillis();
     private static int executedCmds = 0;
     //public static Logger LOG = LoggerFactory.getLogger("ARnoBot");
@@ -62,7 +62,7 @@ public class Main extends ListenerAdapter {
         new Main();
         try {
             JDA jda = new JDABuilder(BOT_TOKEN)
-                    .addEventListener(new Main())
+                    .addEventListeners(new Main())
                     .setAudioSendFactory(new NativeAudioSendFactory())
                     .build();
             jda.awaitReady();
@@ -137,7 +137,7 @@ public class Main extends ListenerAdapter {
 
 
             if (msg.toLowerCase().startsWith("==ping")) {
-                new cmd_Ping(event, jda.getPing());
+                new cmd_Ping(event, jda.getGatewayPing());
                 executedCmds++;
             }
 

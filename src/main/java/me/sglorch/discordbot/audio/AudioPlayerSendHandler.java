@@ -1,9 +1,10 @@
-package tk.arno.discordbot.audio;
+package me.sglorch.discordbot.audio;
 
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayer;
-import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
 import com.sedmelluq.discord.lavaplayer.track.playback.AudioFrame;
-import net.dv8tion.jda.core.audio.AudioSendHandler;
+import net.dv8tion.jda.api.audio.AudioSendHandler;
+
+import java.nio.ByteBuffer;
 
 public class AudioPlayerSendHandler implements AudioSendHandler {
     public final AudioPlayer audioPlayer;
@@ -24,7 +25,7 @@ public class AudioPlayerSendHandler implements AudioSendHandler {
     }
 
     @Override
-    public byte[] provide20MsAudio() {
+    public ByteBuffer provide20MsAudio() {
         if (lastFrame == null) {
             lastFrame = audioPlayer.provide();
         }
@@ -32,7 +33,7 @@ public class AudioPlayerSendHandler implements AudioSendHandler {
         byte[] data = lastFrame != null ? lastFrame.getData() : null;
         lastFrame = null;
 
-        return data;
+        return ByteBuffer.wrap(data);
     }
 
     @Override

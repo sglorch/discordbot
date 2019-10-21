@@ -1,4 +1,4 @@
-package tk.arno.discordbot;
+package me.sglorch.discordbot;
 
 import com.zaxxer.hikari.HikariDataSource;
 
