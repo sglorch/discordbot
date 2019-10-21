@@ -1,1 +1,3 @@
-[![pipeline status](https://gitlab.sglorch.me/sglorch/discordbot/badges/master/pipeline.svg)](https://gitlab.sglorch.me/sglorch/discordbot/commits/master)
+#Discordbot by ARnonym123
+
+[![Build Status](https://travis-ci.org/sglorch/discordbot.svg?branch=master)](https://travis-ci.org/sglorch/discordbot)
