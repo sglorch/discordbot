@@ -1,3 +1,10 @@
 language: java
 addons:
   artifacts: true
+deploy:
+  provider: releases
+  api_key:
+    secure: M86QLD3ycnXqk6RTqY7Gqs/A1QZJP1vH/3ssPXLEAcNWv4tHx26J3tbalTO5WotV1SF6PuHJQljitY+DNcDhFaffdcKhQONtZTFbAaKNuQ1Vao+c3EuOBfapcSUbnie8VEDbCL5n3XwEW+FKgEkB3ac0dIJLEwTSlnrVU/O9TXMS9WsOECzMLSdsRfszpEGpStEYQI9Beb2dhYbJ2Zv7bKwBlTkQtirPxdbWXwbxDH7ppO3YD/TgoSFIzNwAbdxFnFi5IaJcw8GqIq3oW6eqlJHt/hU59bLSJ89xmWt/qVkTT3+kMpUImboTPc/d2t7OFgempxFtoCaFQZZfLnBvoaazNZBhwaXI3/aOWuY3/KF7WNuyF169tkZbPwzZlNNz5CiD6fU5PtzWbJ0GPtcJk8i0kjuA6nD/ApHrnJY9mM7Ee91Dt0/TWzkMBs6LkGskF/VfctnKVElTThaJEfzcElu168ymhbs3J3Ysf6zrz4Mk9FCu2DA9HH1AIMEeJJ/AFeDbivAH8A/v4Cu699aGGvGGOMzfTcT4Z+UbSg2iUONWIBYy7r/YQyIf7uDMxgwJE7/R5/NpTdZuv9E4VFuN5mCkARnt6TwUUJlTZwepJHqYkR8rlYOFf0lNI9QfpVr0FA+nWUK/sSnAQiygB7dUt4h0ERwdFyBMmqtp/z/hXO8=
+  file: 'build/libs/*-all.jar'
+  on:
+    repo: sglorch/discordbot
