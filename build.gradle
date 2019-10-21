@@ -1,7 +1,7 @@
 plugins {
     id 'java'
     id 'application'
-    id 'com.github.johnrengelman.shadow' version '2.0.1'
+    id 'com.github.johnrengelman.shadow' version '5.1.0'
 }
 group 'me.sglorch'
 version '2.0-SNAPSHOT'
@@ -22,4 +22,9 @@ dependencies {
     compile 'com.zaxxer:HikariCP:2.7.4'
     compile group: 'at.mukprojects', name: 'giphy4j', version: '1.0.1'
     compile 'io.sentry:sentry:1.7.27'
+}
+jar {
+    manifest {
+        attributes 'Main-Class': 'me.sglorch.discordbot.Main'
+    }
 }

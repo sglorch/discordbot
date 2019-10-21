@@ -50,26 +50,15 @@
     </treeState>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7744da73-b29c-4d54-8bc6-c74390a06ed3" name="Default Changelist" comment="Changes:&#10;+ Updated dependencies&#10;+ Updated JAA to V4">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="7744da73-b29c-4d54-8bc6-c74390a06ed3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/audio/AudioPlayerSendHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/audio/AudioPlayerSendHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/audio/GuildMusicManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/audio/GuildMusicManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/audio/TrackScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/audio/TrackScheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/cmd_8Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/cmd_8Ball.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/cmd_Gif.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/cmd_Gif.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/cmd_Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/cmd_Music.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/cmd_Ping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/cmd_Ping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/cmd_Time.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/sglorch/discordbot/cmd_Time.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -124,6 +113,17 @@
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="discordbot" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="shadow" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="discordbot" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -159,6 +159,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -177,7 +178,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.discordbot [jar]">
+  <component name="RunManager" selected="Gradle.discordbot [shadowJar]">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tk.arno.discordbot.Main" />
       <module name="discordbot_main" />
@@ -208,26 +209,6 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="discordbot [check]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="check" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <extension name="recording" autostart="false" />
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
@@ -270,20 +251,39 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="discordbot [shadowJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="shadowJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="Gradle.discordbot [check]" />
       <item itemvalue="Gradle.discordbot [run]" />
       <item itemvalue="Gradle.discordbot [build]" />
       <item itemvalue="Gradle.discordbot [jar]" />
+      <item itemvalue="Gradle.discordbot [shadowJar]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.discordbot [shadowJar]" />
         <item itemvalue="Gradle.discordbot [jar]" />
         <item itemvalue="Gradle.discordbot [build]" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.discordbot [run]" />
-        <item itemvalue="Gradle.discordbot [check]" />
       </list>
     </recent_temporary>
   </component>
@@ -319,7 +319,7 @@
       <workItem from="1560176321440" duration="1198000" />
       <workItem from="1560286251293" duration="1568000" />
       <workItem from="1567606222976" duration="24000" />
-      <workItem from="1571651342534" duration="2287000" />
+      <workItem from="1571651342534" duration="3136000" />
     </task>
     <task id="LOCAL-00001" summary="Init files IntelliJ">
       <created>1540761077991</created>
@@ -492,7 +492,8 @@
     <MESSAGE value="Changes:" />
     <MESSAGE value="Changes:&#10;+ GIF-command" />
     <MESSAGE value="Changes:&#10;+ Updated dependencies&#10;+ Updated JAA to V4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes:&#10;+ Updated dependencies&#10;+ Updated JAA to V4" />
+    <MESSAGE value="Changes:&#10;+ Updated build.gradle" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes:&#10;+ Updated build.gradle" />
   </component>
   <component name="gradleExecuteTaskHistory">
     <option value="" />
