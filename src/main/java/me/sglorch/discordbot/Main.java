@@ -59,7 +59,7 @@ public class Main extends ListenerAdapter {
     public static void main(String[] args) {
         new Main();
         try {
-            JDA jda = new JDABuilder(BOT_TOKEN)
+            JDA jda = new JDABuilder.createDefault(BOT_TOKEN)
                     .addEventListeners(new Main())
                     .setAudioSendFactory(new NativeAudioSendFactory())
                     .build();
